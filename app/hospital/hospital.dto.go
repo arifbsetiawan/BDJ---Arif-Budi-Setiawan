@@ -9,7 +9,7 @@ type Response struct {
 type Hospital struct {
 	ID             int      `json:"id"`
 	HospitalName   string   `json:"nama_rsu"`
-	HospitalType   int      `json:"jenis_rsu"`
+	HospitalType   string   `json:"jenis_rsu"`
 	Location       Location `json:"location"`
 	PostalCode     int      `json:"kode_pos"`
 	Phone          []string `json:"telepon"`
@@ -19,12 +19,12 @@ type Hospital struct {
 	CityCode       int      `json:"kode_kota"`
 	DistrictCode   int      `json:"kode_kecamatan"`
 	SubdistictCode int      `json:"kode_kelurahan"`
-	Latitude       string   `json:"latitude"`
-	Longitude      string   `json:"longitude"`
+	Latitude       float64  `json:"latitude"`
+	Longitude      float64  `json:"longitude"`
 }
 
 type Location struct {
-	Address   string `json:"alamat"`
-	Latitude  string `json:"latitude"`
-	Longitude string `json:"longitude"`
+	Address   string  `json:"alamat"`
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
 }

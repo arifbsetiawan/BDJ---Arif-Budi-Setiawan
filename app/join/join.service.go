@@ -47,8 +47,8 @@ func (s *JoinService) Find() (Response, error) {
 			HospitalName: data.HospitalName,
 			HospitalType: data.HospitalType,
 			Location: Location{
-				Latitude:  data.Latitude,
-				Longitude: data.Longitude,
+				Latitude:  data.Location.Latitude,
+				Longitude: data.Location.Longitude,
 			},
 			Address:    data.Location.Address,
 			PostalCode: data.PostalCode,
@@ -74,7 +74,7 @@ func (s *JoinService) Find() (Response, error) {
 
 	response := Response{}
 	response.Status = "success"
-	response.Count = hospitals.Count
+	response.Count = len(joins)
 	response.Data = joins
 
 	return response, nil

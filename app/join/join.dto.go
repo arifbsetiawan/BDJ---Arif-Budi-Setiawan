@@ -9,7 +9,7 @@ type Response struct {
 type Join struct {
 	ID           int         `json:"id"`
 	HospitalName string      `json:"nama_rsu"`
-	HospitalType int         `json:"jenis_rsu"`
+	HospitalType string      `json:"jenis_rsu"`
 	Location     Location    `json:"location"`
 	Address      string      `json:"alamat"`
 	PostalCode   int         `json:"kode_pos"`
@@ -23,8 +23,8 @@ type Join struct {
 }
 
 type Location struct {
-	Latitude  string `json:"latitude"`
-	Longitude string `json:"longitude"`
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
 }
 
 type Subdistrict struct {
