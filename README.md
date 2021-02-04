@@ -1,4 +1,4 @@
-# BDJ---Arif-Budi-Setiawan
+# JSC Join API
 
 ## How to:
 1. Copy .env.example rename to .env
